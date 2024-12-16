@@ -46,7 +46,7 @@ const getAllCartProduct = async (req, res) => {
     } catch (error) {
       res.status(500).json({
         success: false,
-        message: "Error retrieving all products from the cart.",
+        message: "Error retrieving all product from the cart.",
         error: error.message,
       });
     }
