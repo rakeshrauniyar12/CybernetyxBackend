@@ -52,7 +52,7 @@ const addProduct = async (req, res) => {
       const products = await Product.find(); // Get all products
       res.status(200).json({
         success: true,
-        message: "All products retrieved successfully.",
+        message: "All product retrieved successfully.",
         products: products,
       });
     } catch (error) {
