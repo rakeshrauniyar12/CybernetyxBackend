@@ -19,7 +19,7 @@ connectDB();
 app.use(express.json());
 
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:3000","https://cybernetx.vercel.app"],
   method: "GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD",
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
