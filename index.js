@@ -6,6 +6,8 @@ const userRoute = require("./routes/userRoutes.js");
 const carProductRoute = require("./routes/cartProductRoutes.js");
 const productRoute = require("./routes/productRoutes.js");
 const categoryRoute = require("./routes/categoryRoutes.js");
+const addressRoute = require("./routes/addressRoutes.js");
+const orderRoute = require("./routes/orderRoutes.js");
 
 dotenv.config();
 
@@ -30,6 +32,8 @@ app.use("/api/auth", userRoute);
 app.use("/api/cartproduct", carProductRoute);
 app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/address", addressRoute);
+app.use("/api/order", orderRoute);
 app.get("/", (req, res) => {
   res.send("Welcome to the authentication API");
 });

@@ -6,7 +6,6 @@ const Product = require("../model/Product"); // Assuming you have a Product mode
 exports.addCartProduct = async (req, res) => {
   try {
     const { userId, cartProductImage, cartProductName, cartProductPrice, cartProductQuantity, cartProductDesc, productId } = req.body;
-
     // Check if the product exists
     const product = await Product.findById(productId);
     if (!product) return res.status(404).json({ message: "Product not found" });
@@ -19,6 +18,7 @@ exports.addCartProduct = async (req, res) => {
       cartProductPrice,
       cartProductQuantity,
       cartProductDesc,
+      userCartId:userId,
     });
 
     // Save cart product
