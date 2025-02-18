@@ -9,6 +9,9 @@ router.post('/add', orderController.addOrder);
 router.get('/get/:userId', orderController.getOrderByUserId);
 router.get('/get/:userId/:orderId', orderController.getOrderByUserAndOrderId);
 router.get('/get/:userId/:orderId/:productId', orderController.getOrderByUserOrderAndProductId);
+router.get('/getcancel/:userId/', orderController.getCancelOrdersByUserId);
+router.get('/getreturn/:userId/', orderController.getReturnOrdersByUserId);
+router.get('/get/:userId/:orderId/:productId', orderController.getOrderByUserOrderAndProductId);
 router.put('/return/:orderId', orderController.updateForReturnOrder);
 
 // Get All Orders
